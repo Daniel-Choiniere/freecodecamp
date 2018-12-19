@@ -1,12 +1,10 @@
+// Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+
 function chunkArrayInGroups(arr, size) {
   // Break it up.
-  var newArr = [];
-
-  for (var i=0; i<arr.length; i++) {
-    console.log(arr.slice(0, size));
-  }
- 
-  console.log(arr);
+  let sliced = arr.slice(0, size);
+  arr.splice(0, size);
+  console.log(sliced,arr);
 }
 
-chunkArrayInGroups(["a", "b", "c", "d"], 2);
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3)
